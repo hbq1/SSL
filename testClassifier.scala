@@ -75,37 +75,4 @@ final class TestClassifier (
   override def copy(extra: org.apache.spark.ml.param.ParamMap): TestClassifier = defaultCopy(extra)
 }
 
-/*
-  Abstract MODEL 
-*/
 
-
-
-  
-
-/*
-object TestClassificationModel {
-
-  /**
-   * Normalize a vector of raw predictions to be a multinomial probability vector, in place.
-   *
-   * The input raw predictions should be >= 0.
-   * The output vector sums to 1, unless the input vector is all-0 (in which case the output is
-   * all-0 too).
-   *
-   * NOTE: This is NOT applicable to all models, only ones which effectively use class
-   *       instance counts for raw predictions.
-   */
-  def normalizeToProbabilitiesInPlace(v: DenseVector): Unit = {
-    val sum = v.values.sum
-    if (sum != 0) {
-      var i = 0
-      val size = v.size
-      while (i < size) {
-        v.values(i) /= sum
-        i += 1
-      }
-    }
-  }
-}
-*/
